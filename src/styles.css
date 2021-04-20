@@ -1,0 +1,9 @@
+/* You can add global styles to this file, and also import other style files */
+
+@import "app/components/templates/css/bootstrap.min.css";
+@import "app/components/templates/css/mdb.min.css";
+@import "app/components/templates/css/form.css";
+@import "app/components/templates/css/main.css";
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
