@@ -16,7 +16,7 @@ import {ApiService} from "../../services/api.service";
       <tbody>
         <tr *ngFor="let todo of todos">
           <th scope="row">{{todo.id}}</th>
-          <td>{{todo.title}}</td>
+          <td><a routerLink="{{todo.id}}">{{todo.title}}</a></td>
           <td>{{todo.completed}}</td>
         </tr>
       </tbody>

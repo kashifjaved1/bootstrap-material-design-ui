@@ -9,7 +9,7 @@ import {Album} from "../../models/album";
 
       <!--Card-->
       <div class="card card-cascade narrower card-ecommerce col-md-3 card-right"  *ngFor="let album of albums">
-
+        <a routerLink="{{album.id}}">
         <!--Card content-->
         <div class="card-body card-body-cascade text-center no-padding">
           <!--Category & Title-->
@@ -22,6 +22,7 @@ import {Album} from "../../models/album";
           <!--Card footer-->
         </div>
         <!--Card content-->
+        </a>
       </div>
       <!--Card-->
 

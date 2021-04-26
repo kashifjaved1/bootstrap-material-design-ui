@@ -13,6 +13,11 @@ import { TodosComponent } from './components/templates/todos.component';
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatSnackBarModule} from "@angular/material/snack-bar";
+import { PostComponent } from './components/templates/post.component';
+import {MatButtonModule} from "@angular/material/button";
+import { AlbumComponent } from './components/templates/album.component';
+import { TodoComponent } from './components/templates/todo.component';
+import { NotFoundComponent } from './components/templates/not-found.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +27,11 @@ import {MatSnackBarModule} from "@angular/material/snack-bar";
     NavbarComponent,
     PostsComponent,
     AlbumsComponent,
-    TodosComponent
+    TodosComponent,
+    PostComponent,
+    AlbumComponent,
+    TodoComponent,
+    NotFoundComponent
   ],
   imports: [
     BrowserModule,
@@ -31,7 +40,8 @@ import {MatSnackBarModule} from "@angular/material/snack-bar";
     FormsModule,
     ReactiveFormsModule,
     BrowserAnimationsModule,
-    MatSnackBarModule
+    MatSnackBarModule,
+    MatButtonModule
   ],
   providers: [],
   bootstrap: [AppComponent]

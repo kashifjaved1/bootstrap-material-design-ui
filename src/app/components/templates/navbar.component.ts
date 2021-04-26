@@ -44,12 +44,11 @@ export class NavbarComponent implements OnInit {
   constructor(private router: Router) { }
 
   ngOnInit(): void {
-    this.router.navigate(['home/posts']);
   }
 
   logout(): void {
     AuthUtils.delAuth();
-    this.router.navigateByUrl('');
+    this.router.navigate(['login']);
   }
 
 }

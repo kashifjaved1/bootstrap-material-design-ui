@@ -22,7 +22,7 @@ import {ApiService} from "../../services/api.service";
 
                     <!--Header-->
                     <div class="form-header purple-gradient">
-                      <h3><i class="fas fa-user mt-2 mb-2"></i> Sign Up</h3>
+                      <h1><i class="fas fa-user mt-2 mb-2"></i> Sign Up</h1>
                     </div>
 
                     <!--Body-->

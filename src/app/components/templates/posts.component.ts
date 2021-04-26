@@ -9,7 +9,7 @@ import {Post} from "../../models/post";
 
         <!--Card-->
         <div class="card card-cascade narrower card-ecommerce col-md-3 card-right"  *ngFor="let post of posts">
-
+          <a routerLink="{{post.id}}">
           <!--Card content-->
           <div class="card-body card-body-cascade text-center no-padding">
             <!--Category & Title-->
@@ -23,9 +23,10 @@ import {Post} from "../../models/post";
 
             <!--Card footer-->
           </div>
+          </a>
           <!--Card content-->
         </div>
-        <!--Card-->
+      <!--Card-->
 
     </div>
   `,
@@ -44,6 +45,7 @@ export class PostsComponent implements OnInit {
 
   ngOnInit(): void {
     this.apiService.getData('/posts').subscribe((res) => {
+        console.log(res);
         this.posts = res;
       },
       error => {

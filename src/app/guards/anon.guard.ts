@@ -1,21 +1,22 @@
-import { Injectable } from '@angular/core';
-import {CanActivate, ActivatedRouteSnapshot, RouterStateSnapshot, UrlTree, Router} from '@angular/router';
+import {Injectable} from '@angular/core';
+import {CanActivate, Router} from '@angular/router';
 import {AuthUtils} from "../utils/auth-utils";
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: "root"
 })
 export class AnonGuard implements CanActivate {
 
-  private router: Router
+  constructor(private router: Router) {
+  }
 
-  canActivate(
-    route: ActivatedRouteSnapshot,
-    state: RouterStateSnapshot): any {
-    if (!AuthUtils.getAuth()){
+  canActivate(): any {
+    //debugger;
+    if (AuthUtils.getAuth() == null) {
       return true;
+    } else {
+      this.router.navigate(['home']);
     }
-    return false;
   }
 
 }
